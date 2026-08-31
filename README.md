@@ -1,12 +1,12 @@
 # Mr Chai — E-Commerce Web Application
 
-Mr Chai is a full-stack e-commerce web application developed to practice and demonstrate real-world frontend and backend development. The project is being built incrementally, starting with user registration and authentication and gradually expanding toward a complete e-commerce platform.
+Mr Chai is a full-stack e-commerce web application developed to practice and demonstrate real-world frontend and backend development. The project is being built incrementally, with user registration and login currently implemented and additional e-commerce features planned for future development.
 
 ## Project Status
 
 **Currently in development**
 
-The initial version focuses on establishing the frontend-backend connection and implementing user registration with database persistence.
+The current version focuses on establishing frontend-backend communication and implementing user registration and login functionality with database integration.
 
 ## Current Implementation
 
@@ -27,13 +27,20 @@ Currently implemented:
 * User login page UI
 * User registration page UI
 * Registration form with:
-
   * Name
   * Email
   * Password
+    
 * Client-side form handling using JavaScript
 * Asynchronous communication with the Spring Boot backend using `fetch()`
 * JSON request creation and transmission
+* Login form with:
+  * Email
+  * Password
+    
+* Login form input handling and submission
+* Login success and failure message handling
+* Redirect to the dashboard after successful login
 
 ### Backend
 
@@ -53,7 +60,8 @@ Currently implemented:
 * User service
 * User controller
 * User registration REST API
-* User login API structure
+* User login REST API
+* Login form input handling and submission
 * CORS configuration for frontend-backend communication
 * Request handling using `@RequestBody`
 * Database persistence using Spring Data JPA
@@ -99,8 +107,39 @@ Example request:
   "password": "password"
 }
 ```
-
 The backend processes the request and stores the user information in the database.
+
+## Current Login Flow
+
+```text
+User
+ ↓
+Login Form
+ ↓
+JavaScript
+ ↓
+Create JSON Object
+ ↓
+Fetch API
+ ↓
+POST /users/login
+ ↓
+Spring Boot Controller
+ ↓
+User Service
+ ↓
+User Repository
+ ↓
+MySQL Database
+ ↓
+Validate Email & Password
+ ↓
+Login Response
+ ↓
+Success Message / Error Message
+ ↓
+Dashboard
+```
 
 ## Project Structure
 
@@ -178,7 +217,7 @@ Request body:
 }
 ```
 
-> The login endpoint is currently being developed and will be integrated with the frontend login form.
+> The login endpoint is integrated with the frontend login form. The frontend sends the user's email and password to the Spring Boot backend, which input handling and submission.
 
 ## Technologies Used
 
@@ -201,7 +240,7 @@ The project will be developed incrementally with the following features planned:
 * [x] Backend user registration API
 * [x] Database persistence for users
 * [x] Frontend-backend communication
-* [ ] User login
+* [x] User login
 * [ ] Authentication and authorization
 * [ ] Product management
 * [ ] Product listing and dashboard
