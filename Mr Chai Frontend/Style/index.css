@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Navbar */
+.navbar {
+    height: 70px;
+    background-color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 50px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Company Name */
+.company-name {
+    font-size: 25px;
+    font-weight: bold;
+    color: #2563eb;
+}
+
+/* Right Side Links */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Cart */
+.cart {
+    text-decoration: none;
+    color: #333333;
+    font-size: 16px;
+    font-weight: 500;
+
+    transition: color 0.3s;
+}
+
+.cart:hover {
+    color: #2563eb;
+}
+
+/* Login Button */
+.login-btn {
+    text-decoration: none;
+    background-color: #2563eb;
+    color: white;
+
+    padding: 10px 22px;
+    border-radius: 6px;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #1d4ed8;
+}

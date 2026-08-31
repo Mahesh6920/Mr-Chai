@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register - Mr Chai</title>
+
+    <link rel="stylesheet" href="../Style/register.css">
+</head>
+
+<body>
+
+    <div class="register-container">
+
+        <div class="register-card">
+
+            <h2>Create Account</h2>
+
+            <p class="register-subtitle">
+                Create your account to start shopping.
+            </p>
+
+            <form id="registerForm">
+
+    <!-- Name -->
+    <div class="form-group">
+        <label for="name">Name</label>
+
+        <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            autocomplete="name"
+            required>
+    </div>
+
+    <!-- Email -->
+    <div class="form-group">
+        <label for="email">Email</label>
+
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            autocomplete="email"
+            required>
+    </div>
+
+    <!-- Password -->
+    <div class="form-group">
+        <label for="password">Password</label>
+
+        <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+            autocomplete="new-password"
+            required>
+    </div>
+
+    <button
+        type="submit"
+        id="register-button"
+        class="register-button">
+        Register
+    </button>
+
+</form>
+
+            <!-- Login Link -->
+            <p class="login-text">
+                Already have an account?
+                <a href="/HTML/login.html">Login</a>
+            </p>
+
+        </div>
+
+    </div>
+
+    <script src="../JS/register.js"></script>
+
+</body>
+
+</html>
