@@ -25,7 +25,7 @@ public class UserService {
 		User user = userRepo.findByEmail(email)
 				.orElseThrow(() ->
 						new RuntimeException("Invalid email or password"));
-		
+		    
 		if (!user.getPassword().equals(password)) {
 			throw new RuntimeException("Invalid email or password");
 		}

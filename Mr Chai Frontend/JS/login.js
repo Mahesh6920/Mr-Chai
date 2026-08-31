@@ -24,7 +24,7 @@ async function loginUser(loginData) {
             },
             body: JSON.stringify(loginData)
         });
-
+ 
         if (response.ok) {
             loginMessage.textContent = "Login successful! Redirecting...";
             // Redirect to the dashboard or another page after successful login
