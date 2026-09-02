@@ -22,21 +22,23 @@ async function loginUser(loginData) {
             headers: {
                 "Content-Type": "application/json"
             },
+            credentials: "include",
             body: JSON.stringify(loginData)
         });
  
         if (response.ok) {
-            loginMessage.textContent = "Login successful! Redirecting...";
+            loginMessage.innerHTML = "<br> <p style='color: green;'>Login successful! Redirecting...</p>";
             // Redirect to the dashboard or another page after successful login
             setTimeout(() => {
                 window.location.href = "../index.html"; // Change this to your desired page
-            }, 1500); // Redirect after 2 seconds
+            }, 15000); // Redirect after 2 seconds
+            
         } else {
-            loginMessage.textContent = "Login failed. Please check your credentials and try again.";
+            loginMessage.innerHTML = "<br> <p style='color: red;'>Login failed. Please check your credentials and try again.</p>";
         }
 
     } catch (error) {
-        loginMessage.textContent = "An error occurred during login. Please try again later.";
+        loginMessage.innerHTML = "<br> <p style='color: red;'>An error occurred during login. Please try again later.</p>";
         // console.error("Error logging in:", error);
     }
 }

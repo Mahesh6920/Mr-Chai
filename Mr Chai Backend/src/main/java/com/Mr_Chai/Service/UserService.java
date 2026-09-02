@@ -24,15 +24,25 @@ public class UserService {
 		
 		User user = userRepo.findByEmail(email)
 				.orElseThrow(() ->
-						new RuntimeException("Invalid email or password"));
+						new RuntimeException("Invalid email"));
 		    
 		if (!user.getPassword().equals(password)) {
-			throw new RuntimeException("Invalid email or password");
+			throw new RuntimeException("Invalid password");
 		}
 		
-		
+//		System.out.println(user.getEmail() + " " + user.getPassword() + " " + user.getName());
 		
 		return user;
 	}
+
+	public User profile(int id) {
+		User user = userRepo.findById(id)
+				.orElseThrow(() ->
+						new RuntimeException("User not found"));
+		
+		return user;
+	}
+
+	
 	
 }

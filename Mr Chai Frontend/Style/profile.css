@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #222222;
+}
+
+
+/* =========================
+   Navbar
+   ========================= */
+
+.navbar {
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 40px;
+
+    background-color: #ffffff;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Company Name */
+
+.company-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #222222;
+}
+
+
+/* Navigation Links */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 15px;
+}
+
+
+/* Home Button */
+
+.home-btn {
+    color: #333333;
+}
+
+.home-btn:hover {
+    color: #2563eb;
+}
+
+
+/* Logout Button */
+
+.logout-btn {
+    color: #dc2626;
+}
+
+.logout-btn:hover {
+    color: #b91c1c;
+}
+
+
+/* =========================
+   Profile Container
+   ========================= */
+
+.profile-container {
+    min-height: calc(100vh - 70px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+}
+
+
+/* =========================
+   Profile Card
+   ========================= */
+
+.profile-card {
+    width: 400px;
+
+    padding: 35px;
+
+    background-color: #ffffff;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/* =========================
+   Profile Icon
+   ========================= */
+
+.profile-icon-large {
+    width: 90px;
+    height: 90px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #eeeeee;
+
+    border-radius: 50%;
+
+    font-size: 45px;
+}
+
+
+/* =========================
+   Profile Heading
+   ========================= */
+
+.profile-card h2 {
+    margin-bottom: 30px;
+
+    font-size: 26px;
+
+    color: #222222;
+}
+
+
+/* =========================
+   Profile Information
+   ========================= */
+
+.profile-info {
+    text-align: left;
+
+    margin-bottom: 25px;
+}
+
+.profile-info p {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #eeeeee;
+
+    font-size: 15px;
+
+    color: #555555;
+}
+
+.profile-info p:last-child {
+    border-bottom: none;
+}
+
+.profile-info strong {
+    color: #333333;
+}
+
+.profile-info span {
+    color: #555555;
+}
+
+
+/* =========================
+   Edit Profile Button
+   ========================= */
+
+.edit-profile {
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background-color: #2563eb;
+
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s;
+}
+
+.edit-profile:hover {
+    background-color: #1d4ed8;
+}
+
+
+/* =========================
+   Responsive Design
+   ========================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .company-name {
+        font-size: 20px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .profile-container {
+        padding: 20px;
+    }
+
+    .profile-card {
+        width: 100%;
+        max-width: 400px;
+
+        padding: 25px;
+    }
+}
