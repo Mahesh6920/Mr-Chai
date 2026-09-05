@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.Mr_Chai.Entity.User;
 import com.Mr_Chai.Service.UserService;
+import com.Mr_Chai.Service.UserServiceInterface;
 
 import jakarta.servlet.http.HttpSession;
 
@@ -21,7 +22,7 @@ allowCredentials = "true")
 public class UserController {
 
 	@Autowired
-	private UserService userService;
+	private UserServiceInterface userService;
 	
 	@PostMapping("/register")
 	public ResponseEntity<Boolean> register(@RequestBody User user) {

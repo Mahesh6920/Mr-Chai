@@ -7,7 +7,7 @@ import com.Mr_Chai.Entity.User;
 import com.Mr_Chai.Repository.UserRepo;
 
 @Service
-public class UserService {
+public class UserService implements UserServiceInterface {
 	
 	@Autowired
 	private UserRepo userRepo;
