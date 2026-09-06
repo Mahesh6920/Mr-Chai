@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    console.log("PROFILE PAGE LOADED");
+
     loadProfile();
 
 });
@@ -7,13 +9,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
 async function loadProfile() {
 
+    console.log("loadProfile() called");
+
     try {
 
-        const response = await fetch("http://localhost:8080/users/profile",
-            {
+        const response = await fetch("http://localhost:8080/users/profile",{
                 method: "GET",
                 credentials: "include"
-            });       
+            });     
+            
+            console.log("Profile response:", response.status);
 
         if (!response.ok) {
 
@@ -22,6 +27,8 @@ async function loadProfile() {
         }
 
         const user = await response.json();
+
+        console.log("User data:", user);
 
         document.getElementById("profile-id").textContent =
             user.id;

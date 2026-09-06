@@ -31,7 +31,7 @@ async function loginUser(loginData) {
             // Redirect to the dashboard or another page after successful login
             setTimeout(() => {
                 window.location.href = "../index.html"; // Change this to your desired page
-            }, 15000); // Redirect after 2 seconds
+            }, 1500); // Redirect after 2 seconds
             
         } else {
             loginMessage.innerHTML = "<br> <p style='color: red;'>Login failed. Please check your credentials and try again.</p>";

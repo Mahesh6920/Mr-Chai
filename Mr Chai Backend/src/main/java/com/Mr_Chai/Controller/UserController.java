@@ -3,20 +3,16 @@ package com.Mr_Chai.Controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.Mr_Chai.Entity.User;
-import com.Mr_Chai.Service.UserService;
 import com.Mr_Chai.Service.UserServiceInterface;
 
 import jakarta.servlet.http.HttpSession;
 
-@CrossOrigin(origins = "http://localhost:5500", 
-allowCredentials = "true")
 @RestController
 @RequestMapping("/users")
 public class UserController {
@@ -50,10 +46,9 @@ public class UserController {
 		            responseUser.getId()
 		    );
 
-		    System.out.println(
-		            "LOGIN USER ID: " +
-		            session.getAttribute("userId")
-		    );
+			System.out.println("========== LOGIN ==========");
+		    System.out.println("Session ID: " + session.getId());
+		    System.out.println("User ID: " + session.getAttribute("userId"));
 
 		    return ResponseEntity
 		            .status(HttpStatus.OK)
@@ -67,6 +62,10 @@ public class UserController {
 	
 	@GetMapping("/profile")
 	public ResponseEntity<User> profile(HttpSession session) {
+		
+		System.out.println("========== PROFILE ==========");
+	    System.out.println("Session ID: " + session.getId());
+	    System.out.println("User ID: " + session.getAttribute("userId"));
 
 		Object userID = session.getAttribute("userId");
 		
